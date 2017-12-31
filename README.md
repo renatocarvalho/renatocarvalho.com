@@ -1,27 +1,7 @@
-Middleman 4 + Gulp.js
+renatocarvalho.com
 =====================
 
-[![Build Status][travis-svg]][travis] [![Dependency Status][gemnasium-svg]][gemnasium]
-
-This is a [Middleman][middleman] template which implements [Gulp.js][gulp] using the new [external pipeline][external-pipeline] feature introduced in Middleman 4.
-
-Features
---------
-
-- [Gulp.js][gulp] - Asset pipeline
-- [SassC (LibSass)][sass] - CSS prepocessor
-- [Browserify][browserify] - JavaScript bundling
-- [Haml][haml] - So much cleaner than ERB
-- [gulp-imagemin][imagemin] - Image minification
-- [BrowserSync][bsync] - Fast page reloading when changes are made in development
-- [Pry][pry] - REPL, debugger, overall better console experience
-- [jQuery][jquery] and [Moment.js][moment] - Included as examples and so Browserify has something to bundle. :)
-- [Web Font Loader][wfloader] - Asynchronous font loading
-- [Bourbon 5][bourbon] - Sass mixin library (included via npm)
-- [Neat 2][neat] - Sass grid system (included via npm)
-- Integration and unit testing with [Rspec][rspec] and [Capybara][capybara]
-- Linting with [ESLint][eslint], [scss-lint][scss-lint], and [haml-lint][haml-lint]
-- Environment-specific deployment to [Amazon S3][amazon-s3]
+My personal site built with Middleman 4 + Gulp.js template.
 
 Requirements
 ------------
@@ -30,51 +10,6 @@ Requirements
 * [Ruby 2.x][rbenv]
 * [Node 6.x][nvm]
 * [Gulp CLI][gulp-cli]
-
-Usage
------
-
-1. Start a new Middleman site using this template.
-
-        $ middleman init my_new_site -T joshukraine/middleman-gulp
-
-2. Change into the project root and execute the setup script.
-
-        $ cd my_new_site
-        $ chmod +x bin/* # Make sure we can run included scripts
-        $ bin/setup
-
-3. Start the Middleman server. Note that this will also invoke Gulp via the external pipeline.
-
-        $ bundle exec middleman server
-
-4. Initialize a new Git repo.
-
-        $ git init
-        $ git add --all
-        $ git commit -m "Initial commit"
-        $ git remote add origin https://[your-repo-url]
-        $ git push -u origin master
-
-Deployment
-----------
-
-I recommend Amazon S3 for deployment. It's very simple and surprisingly cost effective. Here's how to deploy your site to S3.
-
-1. Read Amazon's guide on [Hosting a Static Website][aws-s3-deployment]
-
-2. In the Gemfile, uncomment and install [middleman-s3_sync][s3-sync]
-
-3. Configure your deployment configs in `environments/production.rb` and `environments/staging.rb`.
-
-4. To deploy, run the deploy script, passing your desired environment as an argument.
-
-        $ bin/deploy production
-        
-        # OR...
-        $ bin/deploy staging
-
-**BONUS: If you deploy with Amazon, you can get a [free ssl certificate][aws-cert-manager] for your site!**
 
 Environments
 ------------
@@ -143,63 +78,12 @@ mms='bundle exec middleman server'
 Acknowledgements
 ----------------
 
-The following repos were very helpful in setting up this template.
+This website was created based on Middleman 4 + Gulp.js template.
 
-- [https://github.com/craigmdennis/middleman-gulp-starter](https://github.com/craigmdennis/middleman-gulp-starter)
-- [https://github.com/thoughtbot/proteus-middleman](https://github.com/thoughtbot/proteus-middleman)
-- [https://github.com/NathanBowers/mm-template](https://github.com/NathanBowers/mm-template)
-- [https://github.com/simonrice/middleman-rspec](https://github.com/simonrice/middleman-rspec)
+- [https://github.com/joshukraine/middleman-gulp](https://github.com/joshukraine/middleman-gulp)
 
-Reference
----------
-
-- [https://youtu.be/-io8EeB3GHI](https://youtu.be/-io8EeB3GHI)
-- [https://github.com/middleman/middleman/issues/1817](https://github.com/middleman/middleman/issues/1817)
-- [https://forum.middlemanapp.com/t/gulp-and-middleman-4/2012](https://forum.middlemanapp.com/t/gulp-and-middleman-4/2012)
 
 License
 -------
 
-Copyright &copy; 2017 Joshua Steele. [MIT License][license]
-
-[travis-svg]: https://travis-ci.org/joshukraine/middleman-gulp.svg?branch=master
-[travis]: https://travis-ci.org/joshukraine/middleman-gulp
-[gemnasium-svg]: https://gemnasium.com/badges/github.com/joshukraine/middleman-gulp.svg
-[gemnasium]: https://gemnasium.com/github.com/joshukraine/middleman-gulp
-[middleman]: https://middlemanapp.com/
-[middleman-docs]: https://middlemanapp.com/basics/install/
-[rbenv]: https://github.com/rbenv/rbenv#readme
-[nvm]: https://github.com/creationix/nvm#readme
-[gulp-cli]: https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md#getting-started
-[gulp]: http://gulpjs.com/
-[sass]: https://www.npmjs.com/package/gulp-sass
-[browserify]: http://browserify.org/
-[haml]: http://haml.info/
-[imagemin]:https://www.npmjs.com/package/gulp-imagemin
-[bsync]: https://www.browsersync.io/
-[pry]: https://github.com/AndrewKvalheim/middleman-pry#readme
-[jquery]: http://jquery.com/
-[moment]: http://momentjs.com/
-[wfloader]: https://www.npmjs.com/package/webfontloader
-[rspec]: http://rspec.info/
-[capybara]: https://github.com/jnicklas/capybara
-[eslint]: https://www.npmjs.com/package/eslint
-[scss-lint]: https://github.com/brigade/scss-lint#readme
-[haml-lint]: https://github.com/brigade/haml-lint#readme
-[bourbon]: http://bourbon.netlify.com/docs/5.0.0/
-[neat]: http://neat.bourbon.io/
-[bitters]: http://bitters.bourbon.io/
-[s3-sync]: https://github.com/fredjean/middleman-s3_sync#readme
-[minify-css-js]: https://middlemanapp.com/advanced/file_size_optimization/#compressing-css-and-javascript
-[minify-html]: https://middlemanapp.com/advanced/file_size_optimization/#minify-html
-[gzip]: https://middlemanapp.com/advanced/file_size_optimization/#gzip-text-files
-[livereload]: https://middlemanapp.com/basics/development_cycle/#livereload
-[gulp-clean-css]: https://www.npmjs.com/package/gulp-clean-css
-[gulp-uglify]: https://www.npmjs.com/package/gulp-uglify
-[gulp-htmlmin]:https://www.npmjs.com/package/gulp-htmlmin
-[gulp-livereload]: https://www.npmjs.com/package/gulp-livereload
-[external-pipeline]: https://middlemanapp.com/advanced/external-pipeline/
-[amazon-s3]: https://aws.amazon.com/s3/
-[aws-s3-deployment]: http://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html
-[aws-cert-manager]: https://aws.amazon.com/blogs/aws/new-aws-certificate-manager-deploy-ssltls-based-apps-on-aws/
-[license]: https://github.com/joshukraine/middleman-gulp/blob/master/LICENSE
+Copyright &copy; 2018 Renato Carvalho. [MIT License][license]
