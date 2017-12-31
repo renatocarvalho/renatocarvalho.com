@@ -1,0 +1,5 @@
+# https://github.com/sds/slim-lint/blob/master/config/default.yml
+
+skip_frontmatter: true
+exclude:
+  - 'source/_analytics.html.slim'
