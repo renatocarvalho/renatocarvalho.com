@@ -28,12 +28,12 @@ ruby:
   = tag "meta", property: "og:url", content: site_url
   = tag "meta", property: "og:title", content: og_title
   = tag "meta", property: "og:description", content: og_desc
-  = tag "meta", property: "og:image", content: og_default_image
+  meta property="og:image" content="#{image_path(og_default_image)}"
 
 title = full_title(page_title, site_title)
 
 = partial "partials/analytics" if production?
-= favicon_tag "favicon.ico"
+= favicon_tag "favicon.png"
 -# = tag "link", rel: "apple-touch-icon", href: image_path("apple-touch-icon.png")
 = stylesheet_link_tag :site
 / = javascript_include_tag :bundle, async: !development?
