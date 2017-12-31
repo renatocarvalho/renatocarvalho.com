@@ -6,7 +6,6 @@ ruby:
   page_title = current_page.data.title.to_s
   page_path = current_page.path
   current_env = config[:environment].to_s
-  og_url = site_url
   og_title = site_title
   og_desc = site_desc
   og_default_image = data.site.facebook_og_image_url
@@ -28,7 +27,7 @@ ruby:
   = tag "meta", property: "og:url", content: site_url
   = tag "meta", property: "og:title", content: og_title
   = tag "meta", property: "og:description", content: og_desc
-  meta property="og:image" content="#{image_path(og_default_image)}"
+  meta property="og:image" content="#{site_url}#{image_path(og_default_image)}"
 
 title = full_title(page_title, site_title)
 
